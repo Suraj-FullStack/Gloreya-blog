@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – Gloreya</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          char: '#211712',
+          ember: '#C1440E',
+          bun: '#E8C282',
+          cream: '#FBF3E7',
+          olive: '#5F6B3E',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['Work Sans', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .stamp {
+    border: 2px solid currentColor;
+    border-radius: 999px;
+    position: relative;
+  }
+  .stamp::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 1px dashed currentColor;
+    border-radius: 999px;
+    opacity: .5;
+  }
+  .grain {
+    background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  .card-hover:hover .card-img { transform: scale(1.06) rotate(-0.5deg); }
+</style>
+</head>
+<body class="bg-cream font-body text-char">
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-char text-cream sticky top-0 z-40 grain">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+      <a href="#" class="font-display text-3xl font-semibold tracking-tight text-bun">Gloreya</a>
+
+      <nav class="hidden lg:flex items-center gap-10 text-sm uppercase tracking-widest">
+        <a href="#" class="hover:text-ember transition-colors">Home</a>
+        <a href="#" class="hover:text-ember transition-colors">Menu</a>
+        <a href="#" class="hover:text-ember transition-colors">About</a>
+        <a href="#" class="text-ember">Blog</a>
+        <a href="#" class="hover:text-ember transition-colors">Gallery</a>
+        <a href="#" class="hover:text-ember transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden sm:inline-block text-xs uppercase tracking-widest border border-bun/60 rounded-full px-5 py-2.5 hover:bg-ember hover:border-ember transition-colors">Order Online</a>
+        <button class="lg:hidden text-bun" aria-label="Open menu">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h20M3 13h20M3 19h20"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE TITLE BANNER ================= -->
+  <section class="relative bg-char text-cream overflow-hidden">
+    <div class="absolute -right-16 -top-24 w-96 h-96 rounded-full bg-ember/20 blur-3xl"></div>
+    <div class="absolute -left-10 bottom-0 w-72 h-72 rounded-full bg-bun/10 blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-20 md:py-28 text-center">
+      <span class="stamp text-bun inline-block px-5 py-1.5 text-xs uppercase tracking-[0.25em] mb-6">From the kitchen</span>
+      <h1 class="font-display text-5xl md:text-6xl font-semibold">The Gloreya Journal</h1>
+      <p class="mt-4 text-cream/60 font-body text-sm uppercase tracking-[0.3em]">Home <span class="mx-2 text-ember">/</span> Blog</p>
+    </div>
+  </section>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="max-w-7xl mx-auto px-6 lg:px-10 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-3 gap-14">
+
+    <!-- ---- BLOG LIST ---- -->
+    <div class="lg:col-span-2 flex flex-col gap-14">
+
+      <!-- Card 1 -->
+      <article class="group card-hover">
+        <a href="#" class="block overflow-hidden rounded-2xl aspect-[16/10]">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop"
+            alt="Kitchen scene: plated burger and sides"
+               class="card-img w-full h-full object-cover transition-transform duration-700 ease-out">
+        </a>
+        <div class="mt-6 flex items-center gap-4 text-xs uppercase tracking-widest text-char/50">
+          <span>By Gloreya</span>
+          <span class="w-1 h-1 rounded-full bg-ember"></span>
+          <span>October 10, 2019</span>
+          <span class="w-1 h-1 rounded-full bg-ember"></span>
+          <span class="stamp text-ember px-3 py-0.5">Burger</span>
+        </div>
+        <h2 class="font-display text-3xl font-semibold mt-4 group-hover:text-ember transition-colors">
+          <a href="#">Labor Department rules: overtime tweaks</a>
+        </h2>
+        <p class="mt-3 text-char/70 leading-relaxed">
+          You're cooking a meal, especially a holiday meal, to be served to friends or family — the key
+          to success is planning. Don't run around second guessing yourself and what you're going to make.
+          Plan your menu, do the shopping, and&hellip;
+        </p>
+        <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold text-ember">
+          Continue Reading
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg>
+        </a>
+      </article>
+
+      <div class="h-px bg-char/10"></div>
+
+      <!-- Card 2 -->
+      <article class="group card-hover">
+        <a href="#" class="block overflow-hidden rounded-2xl aspect-[16/10]">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop"
+            alt="Interior of a new restaurant with diners"
+               class="card-img w-full h-full object-cover transition-transform duration-700 ease-out">
+        </a>
+        <div class="mt-6 flex items-center gap-4 text-xs uppercase tracking-widest text-char/50">
+          <span>By Gloreya</span>
+          <span class="w-1 h-1 rounded-full bg-ember"></span>
+          <span>October 10, 2019</span>
+          <span class="w-1 h-1 rounded-full bg-ember"></span>
+          <span class="stamp text-ember px-3 py-0.5">Burger</span>
+        </div>
+        <h2 class="font-display text-3xl font-semibold mt-4 group-hover:text-ember transition-colors">
+          <a href="#">New restaurant in town</a>
+        </h2>
+        <p class="mt-3 text-char/70 leading-relaxed">
+          You're cooking a meal, especially a holiday meal, to be served to friends or family — the key
+          to success is planning. Don't run around second guessing yourself and what you're going to make.
+          Plan your menu, do the shopping, and&hellip;
+        </p>
+        <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold text-ember">
+          Continue Reading
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg>
+        </a>
+      </article>
+
+      <div class="h-px bg-char/10"></div>
+
+      <!-- Card 3 -->
+      <article class="group card-hover">
+        <a href="#" class="block overflow-hidden rounded-2xl aspect-[16/10]">
+          <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=1200&auto=format&fit=crop"
+            alt="Chef preparing a dish in a restaurant kitchen"
+               class="card-img w-full h-full object-cover transition-transform duration-700 ease-out">
+        </a>
+        <div class="mt-6 flex items-center gap-4 text-xs uppercase tracking-widest text-char/50">
+          <span>By Gloreya</span>
+          <span class="w-1 h-1 rounded-full bg-ember"></span>
+          <span>October 10, 2019</span>
+          <span class="w-1 h-1 rounded-full bg-ember"></span>
+          <span class="stamp text-ember px-3 py-0.5">Burger</span>
+        </div>
+        <h2 class="font-display text-3xl font-semibold mt-4 group-hover:text-ember transition-colors">
+          <a href="#">Starbucks invests $100M in new retail startups</a>
+        </h2>
+        <p class="mt-3 text-char/70 leading-relaxed">
+          You're cooking a meal, especially a holiday meal, to be served to friends or family — the key
+          to success is planning. Don't run around second guessing yourself and what you're going to make.
+          Plan your menu, do the shopping, and&hellip;
+        </p>
+        <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold text-ember">
+          Continue Reading
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" class="transition-transform group-hover:translate-x-1" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg>
+        </a>
+      </article>
+
+      <!-- Pagination -->
+      <nav class="flex items-center justify-center gap-3 pt-6">
+        <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full bg-char text-cream font-semibold">1</a>
+        <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-char/20 hover:bg-char hover:text-cream transition-colors">2</a>
+        <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full border border-char/20 hover:bg-char hover:text-cream transition-colors">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ---- SIDEBAR ---- -->
+    <aside class="flex flex-col gap-12">
+
+      <!-- Search -->
+      <div>
+        <div class="relative">
+          <input type="text" placeholder="Search articles…"
+                 class="w-full bg-white border border-char/15 rounded-full py-3.5 pl-6 pr-14 text-sm placeholder:text-char/40 focus:outline-none focus:border-ember">
+          <button class="absolute right-1.5 top-1.5 w-9 h-9 rounded-full bg-ember text-cream flex items-center justify-center" aria-label="Search">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M15 15l-4-4"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Posts -->
+      <div>
+        <h3 class="font-display text-xl font-semibold mb-6 pb-3 border-b-2 border-bun">Recent Posts</h3>
+        <ul class="flex flex-col gap-5">
+          <li class="flex gap-4">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=200&auto=format&fit=crop" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" alt="Plated burger with fries">
+            <div>
+                  <a href="#" class="font-display text-base font-medium leading-snug hover:text-ember transition-colors">Labor Department rules: overtime tweaks</a>
+              <p class="text-xs text-char/50 uppercase tracking-widest mt-1">Oct 10, 2019</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=200&auto=format&fit=crop" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" alt="Restaurant interior with patrons">
+            <div>
+                  <a href="#" class="font-display text-base font-medium leading-snug hover:text-ember transition-colors">New restaurant in town</a>
+              <p class="text-xs text-char/50 uppercase tracking-widest mt-1">Oct 10, 2019</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=200&auto=format&fit=crop" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" alt="Chef plating a dish in the kitchen">
+            <div>
+                  <a href="#" class="font-display text-base font-medium leading-snug hover:text-ember transition-colors">Starbucks invests $100M in new retail startups</a>
+              <p class="text-xs text-char/50 uppercase tracking-widest mt-1">Oct 10, 2019</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div>
+        <h3 class="font-display text-xl font-semibold mb-6 pb-3 border-b-2 border-bun">Categories</h3>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="#" class="flex justify-between items-center py-2.5 border-b border-char/10 hover:text-ember transition-colors"><span>Burger</span><span class="text-char/40">(3)</span></a></li>
+          <li><a href="#" class="flex justify-between items-center py-2.5 border-b border-char/10 hover:text-ember transition-colors"><span>Vegan</span><span class="text-char/40">(0)</span></a></li>
+          <li><a href="#" class="flex justify-between items-center py-2.5 hover:text-ember transition-colors"><span>Fast Food</span><span class="text-char/40">(0)</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Archives -->
+      <div>
+        <h3 class="font-display text-xl font-semibold mb-6 pb-3 border-b-2 border-bun">Archives</h3>
+        <ul class="text-sm">
+          <li><a href="#" class="block py-2.5 hover:text-ember transition-colors">October 2019</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="bg-char text-cream rounded-2xl p-8 grain">
+        <h3 class="font-display text-xl font-semibold mb-2">Get the good stuff</h3>
+        <p class="text-sm text-cream/60 mb-5">New recipes and kitchen stories, once a month, no crumbs left behind.</p>
+        <form class="flex flex-col gap-3">
+          <input type="email" placeholder="you@email.com" class="rounded-full px-5 py-3 text-char text-sm focus:outline-none">
+          <button type="submit" class="bg-ember rounded-full py-3 text-sm uppercase tracking-widest font-semibold hover:bg-ember/90 transition-colors">Subscribe</button>
+        </form>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-char text-cream grain">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <p class="font-display text-2xl font-semibold text-bun mb-4">Gloreya</p>
+        <h4 class="text-sm uppercase tracking-widest text-cream/50 mb-2">Address</h4>
+        <p class="text-cream/80 leading-relaxed">Durbarmarg<br>kathmandu<br>Nepal</p>
+      </div>
+      <div>
+        <h4 class="text-sm uppercase tracking-widest text-cream/50 mb-4">Book a Table</h4>
+        <p class="text-cream/70 leading-relaxed mb-3">Reservations open daily. Call ahead for parties of six or more.</p>
+        <a href="tel:8504354155" class="font-display text-xl font-semibold text-ember">(850) 435-4155</a>
+      </div>
+      <div>
+        <h4 class="text-sm uppercase tracking-widest text-cream/50 mb-4">Opening Hours</h4>
+        <p class="text-cream/80 leading-relaxed">Monday – Friday<br>10:00 AM – 11:00 PM</p>
+      </div>
+      <div>
+        <h4 class="text-sm uppercase tracking-widest text-cream/50 mb-4">Explore</h4>
+        <ul class="flex flex-col gap-2 text-cream/80">
+          <li><a href="#" class="hover:text-ember transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-ember transition-colors">Menu</a></li>
+          <li><a href="#" class="hover:text-ember transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-ember transition-colors">Gallery</a></li>
+          <li><a href="#" class="hover:text-ember transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/50">
+        <p>© 2026 Gloreya. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="hover:text-ember transition-colors">Facebook</a>
+          <a href="#" class="hover:text-ember transition-colors">Twitter</a>
+          <a href="#" class="hover:text-ember transition-colors">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
